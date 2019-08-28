@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="light"> 
+    <!--
+    <ion-buttons slot="start">
+      <ion-back-button color ="white" class = "buttonFont" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-thumbnail slot="end">
+      <img src="../../assets/img/Other.png">
+    </ion-thumbnail>
+    -->
+    
+    <ion-title class ="titleFont" align="center" color ="white">Create event</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="floating">Event Name</ion-label>
+      <ion-input type="text" required [(ngModel)]="name" placeholder="Insert event name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Event Category</ion-label>
+      <ion-select required [(ngModel)] = "markerType" (ngModelChange)="loadMarker()" placeholder="Choose Category">
+        <ion-select-option value="1">Bike</ion-select-option>
+        <ion-select-option value="2">Bottle</ion-select-option>
+        <ion-select-option value="3">Tree</ion-select-option>
+        <ion-select-option value="4">Water</ion-select-option>
+        <ion-select-option value="0">Other</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Event Date</ion-label>
+      <ion-datetime required display-format="MMM DD, YYYY" [(ngModel)] = "date" placeholder="Choose Date">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Event Start Hour</ion-label>
+	  <ion-datetime required display-format="HH:mm" [(ngModel)] = "startHour" placeholder="Choose Hour">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Event Description</ion-label>
+      <ion-input required type="text" [(ngModel)]="description" placeholder="Insert description"></ion-input>
+    </ion-item>
+
+
+  </ion-list>
+  <ion-button  fill="outline" expand="block" class="buttons" color="primary" color="dark"  shape="round" (click)="chooseLocation()">Choose Location</ion-button>
+  
+</ion-content>

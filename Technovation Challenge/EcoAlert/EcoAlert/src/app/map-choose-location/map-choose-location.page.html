@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="light"> 
+    <ion-thumbnail slot="start">
+      <img src="../../assets/img/{{category}}.png">
+    </ion-thumbnail>
+    <ion-title class ="titleFont" align="center" color ="white">Map</ion-title>
+    <ion-thumbnail slot="end">
+      <img src="../../assets/img/{{category}}.png">
+    </ion-thumbnail>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="map" id="map_canvas">
+    <ion-button ion-button (click)="onButtonClick()">MY LOCATION</ion-button>
+    <div id="map_center">
+      <img [src]="'../../assets/icon/' + mapCenterIcon + '.png'"> 
+    </div>
+  </div> 
+  <div class="flex">
+    <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline" shape="round" (click)="addMarker()">Drop Marker </ion-button>
+    <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline"  shape="round" (click)="confirmLocation()">Confirm Location</ion-button>
+  </div>
+</ion-content>

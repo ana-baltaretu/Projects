@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="light"> 
+    <ion-title class ="titleFont" align="center" color ="white">Set Notifications Range</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="map" id="map_canvas">
+    <!--
+<ion-button ion-button (click)="onButtonClick()">MY LOCATION</ion-button> 
+    -->
+  </div>
+
+  <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline" shape="round" (click)="setHomeMarker()">{{homeMarkerText}} </ion-button>
+  <ion-item>
+    <ion-range [(ngModel)]="range" min="100" max="10000" color="secondary" step = "100" (ionChange) = "radiusChanged()">
+      <ion-label slot="start">100</ion-label>
+      <ion-label slot="end">10000</ion-label>
+    </ion-range>
+  </ion-item>
+  <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline" shape="round" (click)="confirmNotificationsRange()">Confirm Notification Range</ion-button>
+</ion-content>

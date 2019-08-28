@@ -1,0 +1,59 @@
+.font{
+    font-size: 13px;
+}
+
+.titleFont{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.fit
+{
+    color: #989aa2;
+}
+.center {
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}
+.photoCenter{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 300px;
+}
+.buttons
+{
+    //width:150px;
+    flex:1;
+    overflow: hidden;
+    margin-left:1px;
+    margin-right:1px;
+    font-size: 13px;
+}
+.bord
+{
+    border: 1px;
+}
+
+
+.ion-color-text {
+    --ion-color-base: #154c08;
+    --ion-color-contrast: #000000;
+}
+
+.ion-color-black {
+    --ion-color-base: #000000;
+    --ion-color-contrast: #000000;
+}
+
+.ion-color-white {
+    --ion-color-base: #ffffff;
+    --ion-color-contrast: #000000;
+}

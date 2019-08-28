@@ -1,0 +1,50 @@
+.center {
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+}
+
+.titleFont{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+.ion-color-white {
+--ion-color-base: #ffffff;
+--ion-color-contrast: #000000;
+}
+
+.ion-color-black {
+--ion-color-base: #000000;
+--ion-color-contrast: #000000;
+}
+
+.ion-color-text {
+--ion-color-base: #154c08;
+--ion-color-contrast: #000000;
+}
+  
+.flex
+{
+    display: flex;
+}
+
+.buttons
+{
+    flex:1;
+    overflow: hidden;
+    margin-left:1px;
+    margin-right:1px;
+    font-size: 13px;
+}
+
+.photoCenter{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 300px;
+}

@@ -1,0 +1,23 @@
+#map_canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.center {
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+}
+
+.titleFont{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ion-color-white {
+--ion-color-base: #ffffff;
+--ion-color-contrast: #000000;
+}

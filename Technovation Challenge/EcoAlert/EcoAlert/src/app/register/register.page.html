@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="light">
+      <ion-title class ="titleFont" align="center" color ="white">Register as Volunteer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-thumbnail class="center" slot="start">
+    <ion-img class="profile-photo" src="../../assets/img/defaultAccount.png"></ion-img>
+  </ion-thumbnail>
+
+<ion-content class="list">
+  <ion-list>
+    <ion-item class="font">
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" required [(ngModel)]="user.username"></ion-input>
+    </ion-item>
+
+    <ion-item class="font">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+
+    <ion-item class="font">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+
+    <ion-item class="font">
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="password" required [(ngModel)]="user.cPassword"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button fill="outline" expand="block" class="buttons" color="primary" color="dark"  shape="round" (click)="register(user)">SignUp</ion-button>
+</ion-content>

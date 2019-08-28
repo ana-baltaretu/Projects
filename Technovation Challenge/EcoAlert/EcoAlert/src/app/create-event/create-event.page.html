@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="light"> 
+    <ion-thumbnail slot="start">
+      <img src="../../assets/img/{{category}}.png">
+    </ion-thumbnail>
+    <ion-title class ="titleFont" align="center" color ="white">Create Event</ion-title>
+    <ion-thumbnail slot="end">
+      <img src="../../assets/img/{{category}}.png">
+    </ion-thumbnail>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-text color="text">
+  
+        <h2>Name
+            <ion-text color="black">
+                <h3>{{name}}</h3>
+            </ion-text>
+        </h2>
+        
+        <h2>Date
+          <ion-text color="black">
+              <h3>{{date | date: "dd/MM/yyyy"}}</h3>
+          </ion-text>
+        </h2>
+        
+        <h2>Start hour 
+          <ion-text color="black">
+              <h3>{{startHour | date: "HH:mm"}}</h3>
+          </ion-text>
+        </h2>
+  
+        <h2>Description 
+          <ion-text color="black">
+              <h3>{{description}}</h3>
+          </ion-text>
+        </h2>
+  
+        <h2>Lattitude 
+          <ion-text color="black">
+              <h3>{{geoLocationLat}}</h3>
+          </ion-text>
+        </h2>
+        
+        <h2>Longitude 
+          <ion-text color="black">
+              <h3>{{geoLocationLng}}</h3>
+          </ion-text>
+        </h2>
+      
+      </ion-text>
+  
+      <div class="flex">
+          <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline" shape="round" (click)="takePhoto(1)">Take Photo</ion-button>
+          <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline"  shape="round" (click)="takePhoto(0)">Select Photo</ion-button>
+        </div>
+      <div *ngIf="base64Image">
+        <ion-thumbnail class="photoCenter" slot="start">
+          <img  [src]="base64Image" *ngIf="base64Image">
+        </ion-thumbnail>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline" shape="round" (click) = "checkEventData()">Create Event</ion-button>
+</ion-content>
+

@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar color="light"> 
+        <ion-title class ="titleFont" align="center" color ="white">Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button  fill="outline" expand="block" class="buttons" color="primary" color="dark"  shape="round" (click)="setNotificationRadius()">Set notification radius</ion-button>
+  
+<ion-card>
+  <ion-card-content>
+    <ion-list>
+        <ion-item-sliding *ngFor="let event of eventsList | async">
+            <ion-item  class="itemlist" lines="full" (click)="itemSelected(event)">
+                  <ion-thumbnail slot="start">
+                    <img src="../../assets/img/{{event.category}}.png">
+                  </ion-thumbnail>
+                  <ion-label>
+                    {{event.name}}
+                    <p class ="second">{{event.description}}</p>
+                    <p class ="second">{{event.date | date: "dd/MM/yyyy"}} - {{event.startHour | date: "HH:mm"}}</p>
+                  </ion-label>
+            </ion-item>
+
+        <ng-container *ngIf="!eventsList || eventsList.length == 0">
+            <div *ngFor="let n of [0,1,2]" padding>
+                <ion-skeleton-text></ion-skeleton-text>
+                <p>
+                  <ion-skeleton-text class="fake-skeleton"></ion-skeleton-text>
+                </p>
+            </div>
+          </ng-container>
+       
+        </ion-item-sliding>
+        
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+</ion-content>

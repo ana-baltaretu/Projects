@@ -1,0 +1,71 @@
+.titleFont{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.center {
+    padding-top:10px;
+    padding-bottom:0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+}
+.photoCenter{
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+}
+  .label[stacked]
+  {
+    font-size: 12px;
+    color: #8e8e8e;
+  }
+  .nomargin{
+    margin: 13px 8px 13px 0;
+  }
+  .item
+  {
+    padding: 0 8px;
+  }
+  .LR_buttons
+{
+  margin: 20px 0 8px 0;
+}
+.flex
+{
+  display:flex;
+}
+.sizenew
+{
+    margin: 8% auto;
+    display: block;
+    width: 140px;
+    height: auto;
+    align-content: center;
+}
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block > .item-block
+{
+  border-bottom: none;
+}
+.font
+{
+    font-size: 11px;
+}
+.buttons
+{
+    //width:150px;
+    flex:1;
+    overflow: hidden;
+    margin-left:1px;
+    margin-right:1px;
+    font-size: 11px;
+}
+
+.ion-color-white {
+  --ion-color-base: #ffffff;
+  --ion-color-contrast: #000000;
+}

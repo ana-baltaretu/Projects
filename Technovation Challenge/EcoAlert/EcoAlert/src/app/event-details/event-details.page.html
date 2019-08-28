@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="light">
+      <ion-thumbnail slot="start">
+        <img src="../../assets/img/{{items[0]}}.png">
+      </ion-thumbnail>
+    <ion-title color="white" class ="titleFont" align="center">{{ items[7] }}</ion-title>
+    <ion-thumbnail slot="end">
+      <img src="../../assets/img/{{items[0]}}.png">
+    </ion-thumbnail>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  
+        <ion-card>
+          <ion-card-content>
+            <ion-text color="text">
+              <h2>Event description</h2>
+              <ion-text color="black">
+                <h3>{{ items[2] }}</h3>
+              </ion-text>
+              
+              <h2>Date
+                <ion-text color="black">
+                    <h3>{{items[1] | date: "dd/MM/yyyy"}}</h3>
+                </ion-text>
+              </h2>
+              
+              <h2>Start hour 
+                <ion-text color="black">
+                    <h3>{{items[9] | date: "HH:mm"}}</h3>
+                </ion-text>
+              </h2>
+              
+              <h2>Number of participants:
+                <ion-text color="black">
+                    {{ nrParticipants }}
+                </ion-text>
+              </h2>
+            </ion-text>
+
+            <div *ngIf="base64Image">
+              <ion-thumbnail class="photoCenter" slot="start">
+                <img  [src]="base64Image" *ngIf="base64Image">
+              </ion-thumbnail>
+            </div>
+          </ion-card-content>
+        </ion-card>
+
+  <ion-button fill="outline" expand="block" color="dark" class="buttons"shape="round" (click)="participateAtTheEvent()">Participate</ion-button>
+
+</ion-content>
+

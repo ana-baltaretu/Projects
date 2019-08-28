@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title class ="titleFont" align="center" color ="white">My profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-card>
+      <ion-card-content>
+          <div>
+              <ion-thumbnail class="photoCenter" slot="start">
+                  <img  [src]="base64Image" *ngIf="base64Image">
+              </ion-thumbnail>
+          </div>
+          
+          <div class="flex">
+          <ion-button fill="outline" size="small" color="dark" class="buttons"shape="round" (click)="takePhoto(1)">Take Photo</ion-button>
+          <ion-button fill="outline" size="small" color="dark" class="buttons" shape="round" (click)="takePhoto(0)">Select Photo</ion-button>
+          </div>
+
+
+          <ion-list lines="full">
+              <ion-item>
+              <ion-label class="stacked_title" stacked>Email</ion-label>
+              <ion-label class="stacked_title nomargin">{{ items[0] }}</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label class="stacked_title" stacked>Username</ion-label>
+                  <ion-label class="stacked_title nomargin">{{ items[8] }}</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-input type="Password" [(ngModel)]="npassword" placeholder="New Password"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input type="Password" [(ngModel)]="cnpassword" placeholder="Confirm New Password"></ion-input>
+                </ion-item>
+                 
+                <div class="flex">
+                  <ion-button fill="outline" size="small" color="dark" class="buttons"shape="round" (click)="changePassword(npassword, cnpassword)">Change Password</ion-button>
+                  <ion-button fill="outline" size="small" color="dark" class="buttons" shape="round" (click)="logOut()">LogOut</ion-button>
+                </div> 
+          </ion-list>
+          
+
+      </ion-card-content>
+    </ion-card>
+
+    
+
+    
+
+    
+
+    <ion-card>
+      <ion-card-content>
+        <ion-title align="center">Events that I participate at</ion-title>
+        <ion-list>
+          
+            <ion-item-sliding *ngFor="let event of eventsList | async">
+            
+                <ion-item  class="itemlist" lines="full" (click)="itemSelected(event)">
+                  
+                      
+                      <ion-thumbnail slot="start">
+                        <img src="../../assets/img/{{event.category}}.png">
+                      </ion-thumbnail>
+                      <ion-label>
+                      
+                        {{event.description}}
+                        <p  class ="second">{{event.name}}</p>
+                        <p class ="second">{{event.category}}</p>
+                      </ion-label>
+                
+                </ion-item>
+    
+            <ng-container *ngIf="!eventsList || eventsList.length == 0">
+                <div *ngFor="let n of [0,1,2]" padding>
+                    <ion-skeleton-text></ion-skeleton-text>
+                    <p>
+                      <ion-skeleton-text class="fake-skeleton"></ion-skeleton-text>
+                    </p>
+                </div>
+              </ng-container>
+           
+            </ion-item-sliding>
+            
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+
+    
+</ion-content>
+
+
+

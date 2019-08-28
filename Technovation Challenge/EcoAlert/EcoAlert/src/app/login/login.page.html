@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="light">
+      <ion-title class ="titleFont" align="center" color ="white">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="backgroundIMG">
+  <img src="assets/img/logoPNG.png" class="size">
+
+<ion-content class="list">
+  <ion-list>
+    <ion-item class="font">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+
+    <ion-item class="font">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="dark"  expand="block" class="buttons" class="center" class="logbutton"  fill="outline" shape="round"  round (click)="login(user)">Login</ion-button>
+
+
+  <ion-text color="dark-shade" class="sup">
+    <h1>Don't have an account? Register here as</h1>
+  </ion-text>
+  <div class="flex">
+  <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline" shape="round"  routerLink="/register" routerDirection="forward">Volunteer</ion-button>
+  <ion-button fill="solid" expand="block" class="buttons" color="dark" fill="outline"  shape="round"  routerLink="/register1" routerDirection="forward">Organizer</ion-button>
+  </div>
+</ion-content>
